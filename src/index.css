@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+body {
+  @apply bg-emerald-900 text-white min-h-screen overflow-hidden;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 80%),
+    url("https://www.transparenttextures.com/patterns/felt.png");
+}
+
+.card-fan {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 160px;
+}
+
+.card-fan-item {
+  margin-left: -40px;
+  transition: margin 0.2s ease;
+}
+
+.card-fan-item:first-child {
+  margin-left: 0;
+}
+
+.card-fan-item:hover {
+  margin-left: -20px;
+  margin-right: 20px;
+  z-index: 50;
+}
+
+.card-fan-item:hover + .card-fan-item {
+  margin-left: -20px;
+}
+
